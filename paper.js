@@ -8,6 +8,7 @@ class Paper {
       this.body = Bodies.circle(x, y, 30, options);
       this.radius = 50;
       World.add (world,this.body)
+      this.image = loadImage("paper.png")
     }
     display(){
       var pos =this.body.position;
@@ -15,9 +16,9 @@ class Paper {
       push();
       translate(pos.x, pos.y);
       rotate(angle);
-      ellipseMode(CENTER);
+      imageMode(CENTER);
       fill("yellow");
-     ellipse(0, 0, this.radius, this.radius);
+     image(this.image,0, 0, this.radius, this.radius);
       pop();
     }
 }

@@ -29,7 +29,7 @@ function setup() {
 
 function draw() {
   rectMode(CENTER);
-  background(0);
+  background(255);
   ground.display();
   paper.display();
   box1.display();
